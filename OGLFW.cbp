@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="OGLFW" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_1110" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/OGLFW" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_1110" />
+				<Compiler>
+					<Add option="-std=c++17" />
+					<Add option="-m64" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="D:/__IDE/__compilers/Dependencies/libglfw3.a" />
+					<Add library="D:/__IDE/__compilers/Dependencies/libgdi32.a" />
+					<Add library="D:/__IDE/__compilers/Dependencies/glew32s.lib" />
+					<Add library="D:/__IDE/__compilers/Dependencies/libglu32.a" />
+					<Add library="D:/__IDE/__compilers/Dependencies/libopengl32.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/OGLFW" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_1110" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="OGLFW.cpp" />
+		<Unit filename="OGLFW.hpp" />
+		<Unit filename="unit_tests.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

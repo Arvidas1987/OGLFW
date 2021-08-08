@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1628405512 source:e:\c++\_git\oglfw\oglfw.cpp
+	"OGLFW.hpp"
+
+1628405454 e:\c++\_git\oglfw\oglfw.hpp
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	<string>
+
+1628405395 source:e:\c++\_git\oglfw\unit_tests.cpp
+	<iostream>
+	"OGLFW.hpp"
+
