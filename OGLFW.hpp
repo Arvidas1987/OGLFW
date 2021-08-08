@@ -6,6 +6,8 @@
 #
 #include <GLFW/glfw3.h>
 #
+#include <string>
+#
 class Window
 {
 private:
@@ -16,6 +18,11 @@ public:
 
     // return -1 if not initialised
     int init();
+
+    int create_window( int width, int height,
+                       std::string const title,
+                       GLFWmonitor* monitor = nullptr,
+                       GLFWwindow* share = nullptr );
 
 
 }; // class OGLFW
