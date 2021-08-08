@@ -12,3 +12,19 @@ Window::Window():m_window(nullptr)
 Window::~Window()
 {}
 
+//-----------------------------------------------------------------------------
+//                      init()
+//-----------------------------------------------------------------------------
+int Window::init()
+{
+///* Initialize the GLFW library *///
+    if ( GLFW_FALSE == glfwInit() )
+    {
+        return -1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+

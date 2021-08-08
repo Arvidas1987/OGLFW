@@ -14,6 +14,9 @@ public:
     Window();
     ~Window();
 
+    // return -1 if not initialised
+    int init();
+
 
 }; // class OGLFW
 #
