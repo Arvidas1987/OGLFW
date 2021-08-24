@@ -56,3 +56,12 @@ GLFWwindow* Window::ptr()const
 {
     return m_window;
 }
+
+//-----------------------------------------------------------------------------
+//                      should_close()
+//-----------------------------------------------------------------------------
+int Window::should_close( bool close )
+{
+    int tmp = glfwWindowShouldClose( ptr() );
+    return ( (close == true) ? tmp : !tmp );
+}

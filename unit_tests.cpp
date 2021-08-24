@@ -25,9 +25,42 @@ int main()
         Window okno;
         okno.init(); // if you want to try fail this test, comment that line
         TEST_EQUAL( okno.create_window(100,100,"Create window"), -1, "FAILED. Create window issue. "
-                                                    "Did You initialise GLFW? Use init()." )
+                                               "Did You initialise GLFW? Use init()." )
         TEST_EQUAL( okno.create_window(100,100,"Create window"),  0, "PASSED. Create window: OK." )
     }
+    NEWLN()
+    TEST_NAME( "=== should_close(true) ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+
+        bool should_be_close = true;
+
+        while( true ){
+            TEST_EQUAL( should_be_close,  true, "PASSED. Window is closed." )
+            TEST_EQUAL( should_be_close, false, "FAILED. Window should close." )
+            okno.should_close(should_be_close);
+            break;
+        }
+    }
+    NEWLN()
+    TEST_NAME( "=== should_close(false) ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+
+        bool should_be_close = false;
+
+        while( true ){
+            TEST_EQUAL( should_be_close, false, "PASSED. Window should not be closed." )
+            TEST_EQUAL( should_be_close,  true, "FAILED. Window is closed." )
+            okno.should_close(should_be_close);
+            break;
+        }
+    }
+
 
     return 0;
 }
