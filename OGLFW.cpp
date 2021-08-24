@@ -11,7 +11,7 @@ Window::Window():m_window(nullptr)
 //-----------------------------------------------------------------------------
 Window::~Window()
 {
-    glfwDestroyWindow( m_window );
+    glfwDestroyWindow( ptr() );
     glfwTerminate();
     m_window = nullptr;
 }
@@ -49,3 +49,10 @@ int Window::create_window( int width, int height,
     return 0;
 }
 
+//-----------------------------------------------------------------------------
+//                      ptr()
+//-----------------------------------------------------------------------------
+GLFWwindow* Window::ptr()const
+{
+    return m_window;
+}

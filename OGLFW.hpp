@@ -24,6 +24,7 @@ public:
                        GLFWmonitor* monitor = nullptr,
                        GLFWwindow* share = nullptr );
 
+    GLFWwindow* ptr()const;
 
 }; // class OGLFW
 #

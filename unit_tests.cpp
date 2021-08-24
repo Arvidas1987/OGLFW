@@ -23,8 +23,9 @@ int main()
     TEST_NAME( "=== Create window ===" )
     {
         Window okno;
-        //okno.init(); // if you want to try fail this test, comment that line
-        TEST_EQUAL( okno.create_window(100,100,"Create window"), -1, "FAILED. Create window issue. Did You initialise GLFW? Use init()." )
+        okno.init(); // if you want to try fail this test, comment that line
+        TEST_EQUAL( okno.create_window(100,100,"Create window"), -1, "FAILED. Create window issue. "
+                                                    "Did You initialise GLFW? Use init()." )
         TEST_EQUAL( okno.create_window(100,100,"Create window"),  0, "PASSED. Create window: OK." )
     }
 
