@@ -25,7 +25,13 @@ public:
                        GLFWwindow* share = nullptr );
 
     GLFWwindow* ptr()const;
+
     int should_close( bool close = false );
+
+    void swap_buffers();
+    void poll_events();
+    void terminate();
+
 
 }; // class OGLFW
 #

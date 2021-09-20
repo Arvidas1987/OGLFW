@@ -60,6 +60,19 @@ int main()
             break;
         }
     }
+    NEWLN()
+    TEST_NAME( "=== do zrobienia - czy to musi byc? ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+
+        while ( okno.should_close(true) ){
+            okno.swap_buffers();
+            okno.poll_events();
+        }
+        okno.terminate();
+    }
 
 
     return 0;
