@@ -32,6 +32,7 @@ public:
     void poll_events();
     void terminate();
 
+    void set_title( std::string const title );
 
 }; // class OGLFW
 #

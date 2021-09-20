@@ -61,17 +61,13 @@ int main()
         }
     }
     NEWLN()
-    TEST_NAME( "=== do zrobienia - czy to musi byc? ===" )
+    TEST_NAME( "=== set_title() ===" )
     {
         Window okno;
         okno.init();
         okno.create_window(100,100,"Create window");
 
-        while ( okno.should_close(true) ){
-            okno.swap_buffers();
-            okno.poll_events();
-        }
-        okno.terminate();
+        okno.set_title("Nowa nazwa okna.");
     }
 
 

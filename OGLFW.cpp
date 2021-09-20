@@ -89,3 +89,11 @@ void Window::terminate()
 {
     glfwTerminate();
 }
+
+//-----------------------------------------------------------------------------
+//                      set_title
+//-----------------------------------------------------------------------------
+void Window::set_title( std::string const title )
+{
+    glfwSetWindowTitle( ptr(), title.c_str() );
+}
