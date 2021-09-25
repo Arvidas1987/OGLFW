@@ -113,3 +113,19 @@ void Window::get_window_pos( int* xpos, int* ypos )
 {
     glfwGetWindowPos( ptr(), xpos, ypos );
 }
+
+//-----------------------------------------------------------------------------
+//                      set_window_size
+//-----------------------------------------------------------------------------
+void Window::set_window_size( int width, int height )
+{
+    glfwSetWindowSize( ptr(), width, height );
+}
+
+//-----------------------------------------------------------------------------
+//                      get_window_size
+//-----------------------------------------------------------------------------
+void Window::get_window_size( int* width, int* height )
+{
+    glfwGetWindowSize( ptr(), width, height );
+}

@@ -37,6 +37,9 @@ public:
     void set_window_pos( int  xpos, int  ypos);
     void get_window_pos( int* xpos, int* ypos );
 
+    void set_window_size( int  width, int  height );
+    void get_window_size( int* width, int* height );
+
 }; // class OGLFW
 #
 #endif // _OGLFW_HPP_

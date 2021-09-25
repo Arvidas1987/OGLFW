@@ -69,6 +69,44 @@ int main()
 
         okno.set_title("Nowa nazwa okna.");
     }
+    NEWLN()
+    TEST_NAME( "=== set_window_pos() ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+
+        okno.set_window_pos( 500, 300);
+    }
+    NEWLN()
+    TEST_NAME( "=== set_window_pos() ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+        int x, y;
+        okno.get_window_pos( &x, &y);
+        PRINTLN("X pos: " << x << ", Y pos: " << y)
+    }
+    NEWLN()
+    TEST_NAME( "=== set_window_size() ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+
+        okno.set_window_size( 300, 300);
+    }
+    NEWLN()
+    TEST_NAME( "=== get_window_size() ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(200,300,"Create window");
+        int width, height;
+        okno.get_window_size( &width, &height);
+        PRINTLN("width size: " << width << ", height size: " << height)
+    }
 
 
     return 0;
