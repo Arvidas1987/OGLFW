@@ -107,6 +107,16 @@ int main()
         okno.get_window_size( &width, &height);
         PRINTLN("width size: " << width << ", height size: " << height)
     }
+    NEWLN()
+    TEST_NAME( "=== hide_window() and show_window() ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(200,300,"Create window");
+
+        okno.hide_window();
+        okno.show_window();
+    }
 
 
     return 0;

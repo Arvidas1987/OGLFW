@@ -40,6 +40,9 @@ public:
     void set_window_size( int  width, int  height );
     void get_window_size( int* width, int* height );
 
+    void show_window();
+    void hide_window();
+
 }; // class OGLFW
 #
 #endif // _OGLFW_HPP_
