@@ -93,7 +93,23 @@ void Window::terminate()
 //-----------------------------------------------------------------------------
 //                      set_title
 //-----------------------------------------------------------------------------
-void Window::set_title( std::string const title )
+void Window::set_title( const std::string title )
 {
     glfwSetWindowTitle( ptr(), title.c_str() );
+}
+
+//-----------------------------------------------------------------------------
+//                      set_window_pos
+//-----------------------------------------------------------------------------
+void Window::set_window_pos( int xpos, int ypos )
+{
+    glfwSetWindowPos( ptr(), xpos, ypos );
+}
+
+//-----------------------------------------------------------------------------
+//                      get_window_pos
+//-----------------------------------------------------------------------------
+void Window::get_window_pos( int* xpos, int* ypos )
+{
+    glfwGetWindowPos( ptr(), xpos, ypos );
 }

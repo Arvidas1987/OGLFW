@@ -32,7 +32,10 @@ public:
     void poll_events();
     void terminate();
 
-    void set_title( std::string const title );
+    void set_title( const std::string title );
+
+    void set_window_pos( int  xpos, int  ypos);
+    void get_window_pos( int* xpos, int* ypos );
 
 }; // class OGLFW
 #
