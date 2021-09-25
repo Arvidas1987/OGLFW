@@ -153,3 +153,19 @@ void Window::set_key_callback( GLFWkeyfun callback )
 {
     glfwSetKeyCallback( ptr(), callback );
 }
+
+//-----------------------------------------------------------------------------
+//                      set_cursor_pos
+//-----------------------------------------------------------------------------
+void Window::set_cursor_pos( double xpos, double ypos )
+{
+    glfwSetCursorPos( ptr(), xpos, ypos );
+}
+
+//-----------------------------------------------------------------------------
+//                      get_cursor_pos
+//-----------------------------------------------------------------------------
+void Window::get_cursor_pos( double* xpos, double* ypos )
+{
+    glfwGetCursorPos( ptr(), xpos, ypos );
+}

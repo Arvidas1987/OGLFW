@@ -44,6 +44,8 @@ public:
     void show_window();
     void hide_window();
 
+    void set_cursor_pos( double  xpos, double  ypos );
+    void get_cursor_pos( double* xpos, double* ypos );
 }; // class OGLFW
 #
 #endif // _OGLFW_HPP_

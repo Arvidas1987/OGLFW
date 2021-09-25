@@ -79,7 +79,7 @@ int main()
         okno.set_window_pos( 500, 300);
     }
     NEWLN()
-    TEST_NAME( "=== set_window_pos() ===" )
+    TEST_NAME( "=== get_window_pos() ===" )
     {
         Window okno;
         okno.init();
@@ -116,6 +116,25 @@ int main()
 
         okno.hide_window();
         okno.show_window();
+    }
+    NEWLN()
+    TEST_NAME( "=== set_cursor_pos() ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+
+        okno.set_cursor_pos( 500, 300);
+    }
+    NEWLN()
+    TEST_NAME( "=== get_cursor_pos() ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,"Create window");
+        double x, y;
+        okno.get_cursor_pos( &x, &y);
+        PRINTLN("X pos: " << x << ", Y pos: " << y)
     }
 
 
