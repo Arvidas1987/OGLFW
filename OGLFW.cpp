@@ -145,3 +145,11 @@ void Window::hide_window()
 {
     glfwHideWindow( ptr() );
 }
+
+//-----------------------------------------------------------------------------
+//                      set_key_callback
+//-----------------------------------------------------------------------------
+void Window::set_key_callback( GLFWkeyfun callback )
+{
+    glfwSetKeyCallback( ptr(), callback );
+}

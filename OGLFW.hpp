@@ -30,6 +30,7 @@ public:
 
     void swap_buffers();
     void poll_events();
+    void set_key_callback( GLFWkeyfun callback );
     void terminate();
 
     void set_title( const std::string title );
