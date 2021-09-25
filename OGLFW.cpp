@@ -50,6 +50,20 @@ int Window::create_window( int width, int height,
 }
 
 //-----------------------------------------------------------------------------
+//                      create_window
+//-----------------------------------------------------------------------------
+int Window::create_window(int x_pos, int y_pos,
+                          int width, int height,
+                          const std::string title,
+                          GLFWmonitor* monitor,
+                          GLFWwindow* share)
+{
+    int err = create_window( width, height, title, monitor, share);
+    glfwSetWindowPos( ptr(), x_pos, y_pos);
+    return err;
+}
+
+//-----------------------------------------------------------------------------
 //                      ptr()
 //-----------------------------------------------------------------------------
 GLFWwindow* Window::ptr()const

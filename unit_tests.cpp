@@ -136,6 +136,14 @@ int main()
         okno.get_cursor_pos( &x, &y);
         PRINTLN("X pos: " << x << ", Y pos: " << y)
     }
+    NEWLN()
+    TEST_NAME( "=== create_window( int , int , int, int,"
+               " std::string, GLFWmonitor*, GLFWwindow* ===" )
+    {
+        Window okno;
+        okno.init();
+        okno.create_window(100,100,300,300,"Create window");
+    }
 
 
     return 0;

@@ -24,6 +24,12 @@ public:
                        GLFWmonitor* monitor = nullptr,
                        GLFWwindow* share = nullptr );
 
+     int create_window( int x_pos, int y_pos,
+                        int width, int height,
+                        const std::string title,
+                        GLFWmonitor* monitor = nullptr,
+                        GLFWwindow* share = nullptr );
+
     GLFWwindow* ptr()const;
 
     int should_close( bool close = false );
